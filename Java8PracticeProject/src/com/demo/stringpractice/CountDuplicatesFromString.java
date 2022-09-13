@@ -16,7 +16,7 @@ public class CountDuplicatesFromString {
 	Map<Character, Long> count = str.chars().mapToObj(c-> (char)c)
 			.collect(Collectors.groupingBy(c-> c, Collectors.counting()));
 	
-	String[] strs = str.split("");
+			String[] strs = str.split("");
 	
 //	List<String> strings = Arrays.asList(strs);
 //	strings.stream().forEach(x->System.out.println(x+":"+Collections.frequency(strings, x)));
