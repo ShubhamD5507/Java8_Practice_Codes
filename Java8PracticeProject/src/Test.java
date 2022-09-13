@@ -13,7 +13,7 @@ public class Test {
 		
 		int[] x = {1,2,5,8,4,6,7,8,1};
 		
-		Optional opt = Stream.of(1,2,5,8,4,6,7,8,1).sorted().distinct().skip(3).findFirst();
+		Optional<Integer> opt = Stream.of(1,2,5,8,4,6,7,8,1).sorted().distinct().skip(3).findFirst();
 		
 		System.out.println("5th highest Element : "+opt.get());
 		

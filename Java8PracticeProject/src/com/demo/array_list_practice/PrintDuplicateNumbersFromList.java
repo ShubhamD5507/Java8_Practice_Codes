@@ -2,7 +2,9 @@ package com.demo.array_list_practice;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class PrintDuplicateNumbersFromList {
@@ -29,10 +31,15 @@ public class PrintDuplicateNumbersFromList {
 		// To check the frequency of numbers from collection
 		//use this method -->Collections.frequency(list, 1);  returns --> 3 as 1 repeated 3 times
 		
+		Set<Integer> set = new HashSet<Integer>();
+		
 		System.out.println(list);
 		
 		list.stream().filter(e-> Collections.frequency(list, e)>1).collect(Collectors.toSet())
 		.forEach(System.out::println);
+		
+		// Second way
+		
+		list.stream().filter(n-> !set.add(n)).collect(Collectors.toSet()).forEach(num-> System.out.println(num));
 	}
-
 }

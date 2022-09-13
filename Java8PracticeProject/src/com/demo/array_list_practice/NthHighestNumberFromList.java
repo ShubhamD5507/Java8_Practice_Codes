@@ -19,5 +19,9 @@ public class NthHighestNumberFromList {
 		
 		Optional<Integer> nth_num = list.stream().sorted().skip(2).findFirst();
 		System.out.println(nth_num.get() );
+		
+		list.stream().findFirst().ifPresent(num-> System.out.print(num));
+		
+		list.stream().skip(2).findFirst().ifPresent(num-> System.out.print(num));
 	}
 }
